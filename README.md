@@ -18,3 +18,32 @@ The main features of NASTRAN-Diff are:
 Contributions are welcome. Please discuss proposed changes on the GitHub
 Issues page for this project and then submit a Pull Request. Please
 include unit tests for any bugs found or new features added.
+
+## Development Environment
+An Anaconda environment is available for use when developing NASTRAN-Diff.
+To install this environment, navigate to the NASTRAN-Diff directory and run:
+
+```bash
+conda env create -f environment.yml
+```
+
+If you need to update the environment (for example because NASTRAN-Diff now
+needs a new package installed), then run:
+
+```bash
+conda env export --no-builds > environment.yml
+```
+
+You should edit the `environment.yml` file to remove the absolute path in the
+`prefix` line. Then, stage/commit the updated `environemnt.yml` file.
+
+## Building
+An exe can be built using `nuitka` using the following command:
+
+```bash
+python -m nuitka --standalone --show-progress nastrandiff.py
+
+```
+
+Many files will be created in the `dist` directory. This folder can be zipped and
+uploaded to GitHub under the release.

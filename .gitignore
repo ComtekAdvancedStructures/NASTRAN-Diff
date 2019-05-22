@@ -123,4 +123,6 @@ dmypy.json
 .pyre/
 
 .idea/workspace.xml
-
+nastrandiff.build
+nastrandiff.dist
+nastrandiff.zip
