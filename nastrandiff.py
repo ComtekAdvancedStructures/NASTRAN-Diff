@@ -18,6 +18,7 @@ import datetime
 import nastrandiff
 import os
 import pathlib
+import sys
 import time
 import webbrowser
 
@@ -43,7 +44,18 @@ if __name__ == '__main__':
                         help="display the progress of the program")
     parser.add_argument("--no-launch-browser", action="store_true",
                         help="don't launch the system default web browser with the results")
-    args = parser.parse_args()
+
+    args = None  # fix a linting error
+
+    try:
+        args = parser.parse_args()
+    except(argparse.ArgumentError, argparse.ArgumentTypeError):
+        parser.print_help()
+        sys.exit(0)
+
+    if args.file1 is None or args.file2 is None:
+        parser.print_help()
+        sys.exit(0)
 
     nd = nastrandiff.NastranDiff()
     nd.file1 = args.file1
