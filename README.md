@@ -14,6 +14,37 @@ The main features of NASTRAN-Diff are:
 - Supports line continuations
 - Supports both 8 and 16 character fields
 
+# Installation and Usage
+## Windows
+A `.zip` file is available on the GitHub releases pages for this project.
+Download this file and extract it to a folder on your PC.
+
+You'll need to add the `nastrandiff` folder to your system path. You can
+do this permanently by editing the environment variable. Or, you can 
+do this temporarily in the command prompt that you are using by typing the
+following (substituting the correct path).
+
+```bash
+path=%path%;C:\path\to\nastrandiff
+```
+
+You can now navigate to the folder containing the decks you wish to compare
+and type:
+
+```bash
+nastrandiff deck1.bdf deck2.bdf
+```
+
+## Other Operating Systems
+You can call NASTRAN-Diff with your system Python interpreter using the
+following command. You will have to append the appropriate arguments, as
+defined in the help message (which should show up when you call it with
+no arguments).
+
+```bash
+python -m nastrandiff.py
+```
+
 ## Contributing
 Contributions are welcome. Please discuss proposed changes on the GitHub
 Issues page for this project and then submit a Pull Request. Please
@@ -37,7 +68,7 @@ conda env export --no-builds > environment.yml
 You should edit the `environment.yml` file to remove the absolute path in the
 `prefix` line. Then, stage/commit the updated `environemnt.yml` file.
 
-## Building
+## Building for Windows
 An exe can be built using `nuitka` using the following command:
 
 ```bash
