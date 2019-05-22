@@ -13,7 +13,7 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
 
-__version__ = "0.0.0.9000"
+__version__ = "1.0.0"
 
 import argparse
 import datetime
