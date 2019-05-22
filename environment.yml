@@ -1,0 +1,17 @@
+name: NASTRAN-diff
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2019.1.23
+  - certifi=2019.3.9
+  - openssl=1.1.1b
+  - pip=19.1.1
+  - python=3.7.3
+  - setuptools=41.0.1
+  - sqlite=3.28.0
+  - vc=14.1
+  - vs2015_runtime=14.15.26706
+  - wheel=0.33.2
+  - wincertstore=0.2
+prefix: NASTRAN-diff
+
