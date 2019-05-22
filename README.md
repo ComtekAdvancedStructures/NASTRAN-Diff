@@ -66,15 +66,18 @@ conda env export --no-builds > environment.yml
 ```
 
 You should edit the `environment.yml` file to remove the absolute path in the
-`prefix` line. Then, stage/commit the updated `environemnt.yml` file.
+`prefix` line. Then, stage/commit the updated `environemnt.yml` file. 
 
 ## Building for Windows
 An exe can be built using `nuitka` using the following command:
 
 ```bash
-python -m nuitka --standalone --show-progress nastrandiff.py
-
+python -m nuitka --standalone --show-progress - nastrandiff.py
 ```
 
-Many files will be created in the `dist` directory. This folder can be zipped and
-uploaded to GitHub under the release.
+Many files will be created in the `nastrandiff.dist` directory. Copy this
+directory to another location. Rename it to `nastrandiff`. Now, zip this folder
+and uploaded the `.zip` file to GitHub under the release.
+
+Make sure that you incremented `__version__` in `nastrandiff.py` and have
+tagged the release in git (preferably using `git flow release`) 
