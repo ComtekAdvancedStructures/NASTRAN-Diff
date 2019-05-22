@@ -13,6 +13,8 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
 
+__version__ = "1.0.0"
+
 import argparse
 import datetime
 import nastrandiff
@@ -44,6 +46,8 @@ if __name__ == '__main__':
                         help="display the progress of the program")
     parser.add_argument("--no-launch-browser", action="store_true",
                         help="don't launch the system default web browser with the results")
+    parser.add_argument('--version', action='version',
+                        version="NASTRAN-Diff version {version}".format(version=__version__))
 
     args = None  # fix a linting error
 
