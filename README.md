@@ -16,8 +16,9 @@ The main features of NASTRAN-Diff are:
 
 # Installation and Usage
 ## Windows
-A `.zip` file is available on the GitHub releases pages for this project.
-Download this file and extract it to a folder on your PC.
+A `.zip` file is available on the GitHub
+[releases page](https://github.com/ComtekAdvancedStructures/NASTRAN-Diff/releases/latest)
+for this project. Download this file and extract it to a folder on your PC.
 
 You'll need to add the `nastrandiff` folder to your system path. You can
 do this permanently by editing the environment variable. Or, you can 
